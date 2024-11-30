@@ -1,0 +1,230 @@
+@font-face {
+    font-family: 'gthrnd';
+    src: url('fonts/Gotham-Rounded-Medium.ttf');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    font-family: 'gthrnd';
+}
+
+body{
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    
+    background: linear-gradient(180deg, #ef4a75,  	#fd5564);
+
+    position: relative;
+}
+
+.title{
+    display: flex;
+    flex-direction: row;
+
+    align-items: center;    
+    justify-content: center;
+
+    position: absolute;
+    top: 5%;
+
+    width: 25%;
+
+    font-size: 2rem;
+    color:#424242;
+
+    background-color: #ffffff;
+
+    border-radius: 15px;
+
+    -webkit-box-shadow: 0px 0px 9px 6px rgba(0,0,0,0.24);
+    -moz-box-shadow: 0px 0px 9px 6px rgba(0,0,0,0.24);
+    box-shadow: 0px 0px 9px 6px rgba(0,0,0,0.24);
+}
+
+.title img{
+    width: 20%;
+    height: 20%;
+}
+
+.card{
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+
+    width: 30%;
+    height: 75%;
+
+    background-color: #ffffff;
+
+    border-radius: 15px;
+
+    margin-top: 10%;
+
+    -webkit-box-shadow: 0px 0px 9px 6px rgba(0,0,0,0.24);
+    -moz-box-shadow: 0px 0px 9px 6px rgba(0,0,0,0.24);
+    box-shadow: 0px 0px 9px 6px rgba(0,0,0,0.24);
+}
+
+.card .buttons{
+    display: flex;
+    flex-direction: row;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    height: 20%;
+
+    position: absolute;
+    bottom: 3%;
+}
+
+.card .buttons button{
+    border-radius: 50%;
+
+    cursor: pointer;
+
+    margin: 3%;
+
+    height: 90%;
+    width: 26%;
+
+    border: 1px solid #ccc;
+
+    box-shadow: 0 0 10px rgba(0,0,0,0.3 );
+
+    background: url('img/tinder-icons.webp') no-repeat;
+    background-position: 0px 0px;
+    background-size: 600%;
+
+    transition: scale .3s ease;
+}
+
+.card .buttons button:hover{
+    scale: 1.1;
+}
+
+.card .buttons button#dislike{
+    background-position: -435px
+}
+
+.card .buttons button#like{
+    background-position: -145px
+}
+
+.card .cats {
+    
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+    width: 95%;
+    height: 73%;
+
+    margin-left: 5%;
+    margin-top: 2%;
+    margin-right: 5%;
+}
+
+.card .cats #end{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+    font-size: 1.5rem;
+    text-align: center;
+
+    height: 100%;
+
+    color: #424242;
+
+    z-index: 1;
+}
+
+.card .cats article{
+    cursor: grab;
+
+    border-radius: 15px;
+    overflow: hidden;
+
+    position:absolute;
+
+    width: 100%;
+    height: 100%;
+
+    z-index: 2;
+
+    box-shadow: 0 0 10px rgba(0,0,0,0.3 );
+}   
+
+.card .cats article .reset{
+    transition: transform 0.3s ease;
+    transform: translateX(0) !important;
+}
+
+.card .cats article img{
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+}
+
+.card .cats article h2{
+    font-size: 2rem;
+
+    display: flex;
+    align-items: flex-end;
+
+    color: white;
+    position: absolute;
+    
+    inset: 0;
+    width: 100%;
+    height: 100%;
+
+    padding-left: 8%;
+    padding-bottom: 12%;
+
+    z-index: 3;
+
+    background: linear-gradient(to top, #00000088 20%, transparent 40%);
+
+    padding-top: 15%;
+}
+
+.card .cats article span{
+    margin-left: 3%;
+    font-size:2rem;
+    line-height: 1.4;
+}
+
+.card .cats article p{
+    display: flex;
+    align-items:flex-end;
+
+    color: #ffffff;
+    position: absolute;
+    
+    inset: 0;
+
+    padding-left: 8%;
+    padding-bottom: 4%;
+
+    z-index:4;
+}
