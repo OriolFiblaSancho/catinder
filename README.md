@@ -1,7 +1,18 @@
-Simple tinder-like app but with cats.
+# Catinder
 
-Made with vanilla html5, css and JS
+Welcome to **Catinder** - a simple, fun, and interactive Tinder-like app, but with cats! 🐱
 
-Hope you like it
+## Features
+- **Swipe Right** to like a cat
+- **Swipe Left** to pass
+- Discover adorable cats and find your purrfect match!
 
-Send feedback to: oriolfibla@iesmontsia.org
+## Technologies Used
+- **HTML5** for structure
+- **CSS** for styling
+- **JavaScript** for interactivity
+
+## Feedback
+We'd love to hear your thoughts! Send your feedback to: [oriolfibla@iesmontsia.org](mailto:oriolfibla@iesmontsia.org)
+
+Hope you enjoy using Catinder! 😺

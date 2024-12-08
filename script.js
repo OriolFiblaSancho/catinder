@@ -25,6 +25,14 @@ function startDrag (e) {
         const deg = pullDeltaX / 10;
         actualCard.style.transform = `translateX(${pullDeltaX}px) rotate(${deg}deg)`;
         actualCard.style.cursor = 'grabbing';
+        const opacity = Math.abs(pullDeltaX) / 100;
+        const isRight = pullDeltaX > 0;
+
+        const choiceEl = isRight
+            ? actualCard.querySelector('.nope')
+            : actualCard.querySelector('.like');
+
+        choiceEl.style.opacity = opacity;
     }
     
     function onEnd () {
