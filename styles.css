@@ -53,9 +53,7 @@ body{
     align-items: center;
     width: 90%;
     max-width: 400px;
-    height: auto;
-    min-height: 450px;
-    max-height: 580px;
+    height: 80vh;
     aspect-ratio: 400/580;
     background-color: #ffffff;
     border-radius: 15px;
@@ -80,8 +78,8 @@ body{
     border-radius: 50%;
     cursor: pointer;
     margin: 3%;
-    height: clamp(50px, 15vw, 90%);
-    width: clamp(50px, 15vw, 26%);
+    height: clamp(50px, 25vw, 90%);
+    width: clamp(50px, 25vw, 28%);
     border: 1px solid #ccc;
     box-shadow: 0 0 10px rgba(0,0,0,0.3);
     background: url('img/tinder-icons.webp') no-repeat;
@@ -210,6 +208,7 @@ body{
     inset: 0;
     padding-left: 8%;
     padding-bottom: 14px;
+    margin-top: 25px;
     z-index: 4;
     font-size: clamp(0.9rem, 3vw, 1rem);
 }
@@ -229,15 +228,4 @@ body{
     }
 }
 
-/* Media queries para pantallas más grandes */
-@media (min-width: 1200px) {
-    .card {
-        max-width: 500px;
-        max-height: 700px;
-    }
-    
-    .title {
-        max-width: 500px;
-    }
-}
 
