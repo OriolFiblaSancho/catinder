@@ -7,70 +7,59 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-
     font-family: 'gthrnd';
 }
 
 body{
     width: 100%;
-    height: 100%;
-
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
-
     align-items: center;
-    
-    background: linear-gradient(180deg, #ef4a75,  	#fd5564);
-
+    background: linear-gradient(180deg, #ef4a75, #fd5564);
     position: relative;
+    padding: 10px;
 }
 
 .title{
     display: flex;
     flex-direction: row;
-
     align-items: center;    
     justify-content: center;
-
     position: absolute;
     top: 20px;
-
-    width: 400px;
-
-    font-size: 2rem;
-    color:#424242;
-
+    width: 90%;
+    max-width: 400px;
+    font-size: clamp(1.5rem, 5vw, 2rem);
+    color: #424242;
     background-color: #ffffff;
-
     border-radius: 15px;
-
     -webkit-box-shadow: 0px 0px 9px 6px rgba(0,0,0,0.24);
     -moz-box-shadow: 0px 0px 9px 6px rgba(0,0,0,0.24);
     box-shadow: 0px 0px 9px 6px rgba(0,0,0,0.24);
 }
 
 .title img{
-    width: 80px;
-    height: 55px;
+    width: calc(80px * 0.8);
+    height: calc(55px * 0.8);
+    max-width: 80px;
+    max-height: 55px;
 }
 
 .card{
     position: relative;
-
     display: flex;
     flex-direction: column;
-
     align-items: center;
-
-    width: 400px;
-    height: 580px;
-
+    width: 90%;
+    max-width: 400px;
+    height: auto;
+    min-height: 450px;
+    max-height: 580px;
+    aspect-ratio: 400/580;
     background-color: #ffffff;
-
     border-radius: 15px;
-
-    margin-top: 130px;
-
+    margin-top: 100px;
     -webkit-box-shadow: 0px 0px 9px 6px rgba(0,0,0,0.24);
     -moz-box-shadow: 0px 0px 9px 6px rgba(0,0,0,0.24);
     box-shadow: 0px 0px 9px 6px rgba(0,0,0,0.24);
@@ -79,35 +68,25 @@ body{
 .card .buttons{
     display: flex;
     flex-direction: row;
-
     align-items: center;
     justify-content: center;
-
     width: 100%;
     height: 20%;
-
     position: absolute;
     bottom: 3%;
 }
 
 .card .buttons button{
     border-radius: 50%;
-
     cursor: pointer;
-
     margin: 3%;
-
-    height: 90%;
-    width: 26%;
-
+    height: clamp(50px, 15vw, 90%);
+    width: clamp(50px, 15vw, 26%);
     border: 1px solid #ccc;
-
-    box-shadow: 0 0 10px rgba(0,0,0,0.3 );
-
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
     background: url('img/tinder-icons.webp') no-repeat;
     background-position: 0px 0px;
     background-size: 600%;
-
     transition: scale .3s ease;
 }
 
@@ -116,25 +95,21 @@ body{
 }
 
 .card .buttons button#dislike{
-    background-position: -380px
+    background-position: 74%
 }
 
 .card .buttons button#like{
-    background-position: -128px
+    background-position: 25%
 }
 
 .card .cats {
-    
     display: flex;
     flex-direction: column;
-
     align-items: center;
     justify-content: center;
-
     position: relative;
     width: 95%;
     height: 73%;
-
     margin-left: 5%;
     margin-top: 2%;
     margin-right: 5%;
@@ -144,44 +119,34 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
-
     flex-wrap: wrap;
-
-    font-size: 1.5rem;
+    font-size: clamp(1.2rem, 4vw, 1.5rem);
     text-align: center;
-
     height: 100%;
-
     color: #424242;
-
     z-index: 1;
 }
 
 .card .cats article{
     cursor: grab;
-
     border-radius: 15px;
     overflow: hidden;
-
-    position:absolute;
-
+    position: absolute;
     width: 100%;
     height: 100%;
-
     z-index: 2;
-
-    box-shadow: 0 0 10px rgba(0,0,0,0.3 );
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
 }   
 
 .card .cats article .choice{
     border-radius: 15px;
-    color:rgb(255, 255, 255);
+    color: rgb(255, 255, 255);
     z-index: 9999;
     position: absolute;
-    top:32px;
-    right:16px;
+    top: 32px;
+    right: 16px;
     padding: 4px 8px;
-    font-size: 30px;
+    font-size: clamp(20px, 5vw, 30px);
     font-weight: bold;
     opacity: 0;
 }
@@ -200,7 +165,6 @@ body{
     background: green;
     color: rgb(255, 255, 255);
     transform: rotate(30deg);
-    
     right: 16px;
     width: fit-content;
 }
@@ -213,51 +177,67 @@ body{
 .card .cats article img{
     width: 100%;
     height: 100%;
-
     object-fit: cover;
 }
 
 .card .cats article h2{
-    font-size: 2rem;
-
+    font-size: clamp(1.5rem, 5vw, 2rem);
     display: flex;
     align-items: flex-end;
-
     color: white;
     position: absolute;
-    
     inset: 0;
     width: 100%;
     height: 100%;
-
     padding-left: 8%;
     padding-bottom: 70px;
-
     z-index: 3;
-
     background: linear-gradient(to top, #00000088 20%, transparent 40%);
-
     padding-top: 15%;
 }
 
 .card .cats article span{
     margin-left: 3%;
-    font-size:2rem;
+    font-size: clamp(1.5rem, 5vw, 2rem);
     line-height: 1.4;
 }
 
 .card .cats article p{
     display: flex;
-    align-items:flex-end;
-
+    align-items: flex-end;
     color: #ffffff;
     position: absolute;
-    
     inset: 0;
-
     padding-left: 8%;
     padding-bottom: 14px;
+    z-index: 4;
+    font-size: clamp(0.9rem, 3vw, 1rem);
+}
 
-    z-index:4;
+/* Media queries para ajustar elementos en pantallas pequeñas */
+@media (max-width: 480px) {
+    .title {
+        top: 10px;
+    }
+    
+    .card {
+        margin-top: 80px;
+    }
+    
+    .card .cats article h2 {
+        padding-bottom: 50px;
+    }
+}
+
+/* Media queries para pantallas más grandes */
+@media (min-width: 1200px) {
+    .card {
+        max-width: 500px;
+        max-height: 700px;
+    }
+    
+    .title {
+        max-width: 500px;
+    }
 }
 
